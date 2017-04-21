@@ -16,7 +16,7 @@ The Service interface "BetService" provides the method:
 ----------
 
 ##### Class diagram
-![Roulette Simple](/tree/master/RouletteSimple/doc/class-diagram.jpg)
+![Roulette Simple](https://github.com/fabriziozandonella/roulette-simple/blob/master/RouletteSimple/doc/classDiagram.jpg)
 
 ----------
 
