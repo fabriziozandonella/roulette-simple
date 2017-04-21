@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.caci</groupId>
+  <artifactId>roulette-simple</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+  <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+            <!-- States that the plugin's add-test-source goal is executed at generate-test-sources phase. -->
+            <execution>
+                <id>add-groovy-test-sources</id>
+                <phase>generate-test-sources</phase>
+                <goals>
+                    <goal>add-test-source</goal>
+                </goals>
+                <configuration>
+                    <!-- Configures the source directory of integration tests. -->
+                    <sources>
+                        <source>src/test</source>
+                    </sources>
+                </configuration>
+            </execution>
+        </executions>
+  </plugin>      
+    </plugins>
+  </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.10</version>
+  	</dependency>
+  </dependencies>
+  
+</project>

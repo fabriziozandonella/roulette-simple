@@ -32,7 +32,7 @@ public class RouletteWheel {
 	}
 
 
-
+    
 	private void setWheelPockets(){
 		LinkedHashMap<String,String> w = new LinkedHashMap<>();
 		for(int i = 0; i<wheelNumbers.length; i++){
