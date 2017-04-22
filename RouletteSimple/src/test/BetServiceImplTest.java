@@ -17,8 +17,9 @@ import com.caci.technicaltest.BetService;
 import com.caci.technicaltest.BetServiceImpl;
 import com.caci.technicaltest.model.Constants;
 import com.caci.technicaltest.model.Pocket;
+import com.caci.technicaltest.roulette.Roulette;
 import com.caci.technicaltest.roulette.RouletteGameException;
-import com.caci.technicaltest.roulette.RouletteWheel;
+
 
 /**
  * @author Fabrizio
@@ -217,13 +218,12 @@ public class BetServiceImplTest {
 	@Test
 	public void EvenOrOdd_4() {
 		rouletteTest = new RouletteWheelTest(Constants.DOUBLE_ZERO_WHEEL);
-		System.out.println(rouletteTest.getWheelPocketsMap().size());
 		assertTrue(rouletteTest.getWheelPocketsMap().containsKey("00"));
 	}
 
 
 }		
-class RouletteWheelTest extends RouletteWheel{
+class RouletteWheelTest extends Roulette{
 	private int key;
 	private String[] wheelNumbers;
 	/**
@@ -242,7 +242,7 @@ class RouletteWheelTest extends RouletteWheel{
 	}
 
 	@Override
-	public Pocket spin(){
+	public final Pocket spin(){
 		Pocket p = new Pocket();
 		p.setNumber(wheelNumbers[key]);
 

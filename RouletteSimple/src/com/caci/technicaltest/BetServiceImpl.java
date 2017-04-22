@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 
 import com.caci.technicaltest.model.Constants;
 import com.caci.technicaltest.model.Pocket;
+import com.caci.technicaltest.roulette.Roulette;
 import com.caci.technicaltest.roulette.RouletteGameException;
 import com.caci.technicaltest.roulette.RouletteWheel;
 
@@ -17,12 +18,12 @@ import com.caci.technicaltest.roulette.RouletteWheel;
  */
 public class BetServiceImpl implements BetService {
 
-	private RouletteWheel roulette;
+	private Roulette roulette;
 
 	/**
 	 * @param roulette
 	 */
-	public BetServiceImpl(RouletteWheel roulette) {
+	public BetServiceImpl(Roulette roulette) {
 		super();
 		this.roulette = roulette;
 	}
